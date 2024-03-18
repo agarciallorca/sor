@@ -46,7 +46,65 @@ Escribir un script que permita gestionar la base de datos de clientes de una emp
 4. Mostrar lista de todos los clientes de la base datos con su NIF y nombre.
 5. Mostrar la lista de clientes preferentes de la base de datos con su NIF y nombre.
 6. Terminar el programa.
+### :keyboard: Reto 12 (Examen 23/24)
+Tenemos una serie de ordenadores que requieren una licencia para hacer funcionar un software. Disponemos de clave de licencia almacenadas en un fichero llamado `licencias.dat`. Cada clave sirve para un ordenador. Diseña un script llamado `licencias.ps1` que asocie una clave a cada ordenador de acuerdo a los siguientes requerimientos:
+- El script preguntará al usuario cuántos ordenadores hay y cuál es el prefijo de su nombre (por ejemplo A8-).
+- Teniendo en cuenta lo indicado por el usuario, el script deberá crear un directorio llamado `licencias` que dentro tenga un subdirectorio para cada uno de los ordenadores.
+- A continuación, el script leerá el fichero `licencias.dat` y almacenará su contenido en una variable llamada `$licencias`. Esta variable contendrá la lista de claves de licencia.
+- Ahora el script deberá crear, dentro del directorio correspondiente a cada ordenador, un fichero llamado `clave.txt` que contenga una clave de la lista. Si hay más ordenadores que claves, se asignarán en orden. Esto es, puede haber directorios que se queden sin fichero `clave.txt`.
+- Haz que el proceso anterior almacene en un fichero llamado `licencias-aplicadas.csv` la correspondencia del nombre de ordenador con la clave de licencia asignada. Este proceso no debe sobreescribir el contenido del fichero.
+```
+A8-1;ABCD-1234-EFGH-5678
+A8-2;WXYZ-5678-IJKL-9012
+A8-3;QWERT-0987-ASDF-6543
+...
+```
+### :keyboard: Reto 13 (Examen 23/24)
+Se quiere diseñar un script `inventario.ps1` para gestionar el inventario de las aulas de informática del instituto. Para ello se utilizará un diccionario llamado `$inventario` que almacenará como clave el nombre de la ubicación y un array de tres valores asociados a la clave: *nº de equipos*, *tipo* y *características*.
 
+- Cuando se ejecute el script se comprobará si el diccionario tiene datos. Si no tiene datos se inicializará el diccionario con los valores de la siguiente tabla. Si por el contrario el diccionario sí tiene datos, se pasará a mostrar el menú.
+
+|Clave (Ubicación)|Valor 1 (Nº equipos)|Valor 2 (Tipo)|Valor 3 (Características)|
+|-----------------|--------------------|--------------|-------------------------|
+|Aula 5|25|Sobremesa|Intel Core i3 9th Gen|
+|Aula 3|20|AIO|Intel Core i5 11th Gen|
+|Aula 1|21|Sobremesa|Intel Pentium Gold|
+- Una vez realizada la comprobación anterior, el script mostrará un menú para gestionar el diccionario. El script mostrará repetitivamente el menú siguiente hasta que el usuario elija la opción de salir:
+```
+Inventario TIC
+==============
+1.	Listar ubicaciones
+2.	Añadir ubicación
+3.	Eliminar ubicación
+4.	Modificar datos
+5.	Salir
+
+Elija una opción:
+```
+#### Funcionamiento
+- Si se elige una opción que no esté en el menú, el script dará un error indicando que es una opción no válida y volverá a mostrar el menú.
+- Opción 1. Mostrará por pantalla todas las claves del diccionario y sus valores asociados con el siguiente formato:
+```
+Aula 5:
+  25 equipos Sobremesa
+  Intel Core i3 9th Gen
+Aula 3:
+  20 equipos AIO
+  Intel Core i5 11th Gen
+Aula 1:
+  21 equipos Sobremesa
+  Intel Pentium Gold
+```
+- Opción 2. Se solicitarán al usuario por teclado los datos necesarios para añadir al diccionario `$inventario` una nueva ubicación con su array de valores asociado. Si la ubicación se deja en blanco, no se pedirán el resto de datos ni se almacenará en el diccionario. 
+- Opción 3. Solicitará una ubicación y la eliminará del diccionario `$inventario`.
+- Opción 4. Solicitará una ubicación y permitirá modificar cualquiera de los 3 valores asociados. Si un valor se deja en blanco, se mantendrá el valor que tenía anteriormente. 
+```
+Ubicación a modificar: Aula 5
+Número de equipos (25): 26 
+Tipo (Sobremesa):
+Características (Intel Core i3 9th Gen):
+OK! Ubicación actualizada
+```
 ## Comandos
 ### :keyboard: Reto 1
 Obtén un listado de procesos que están en ejecución en el sistema.
@@ -62,6 +120,14 @@ Haz ahora que además sólo aparezcan aquellos procesos que tengan un uso de mem
 Consigue estas alternativas:
 - Que se muestren por pantalla cuántos procesos cumplen los criterios anteriores y su uso de memoria promedio (`Average`).
 - Que el listado de procesos obtenido se almacene en un fichero llamado `procesosgrandes.txt`.
+### :keyboard: Reto 7 (Examen 23/24)
+Obtén un listado de servicios que tengan configurado el arranque (`StartType`) como automático pero que estén en estado (`Status`) detenido. Muestra únicamente las propiedades `Name` y `DisplayName`.
+### :keyboard: Reto 8 (Examen 23/24)
+Ejecuta el comando necesario para obtener el tamaño ocupado por todos los ficheros del directorio `c:\users` (y sus subdirectorios).
+### :keyboard: Reto 9 (Examen 23/24)
+El comando `Get-EventLog -LogName System` muestra por pantalla los eventos ocurridos en el sistema. Obtén los eventos que contengan en su mensaje (propiedad `Message`) la palabra *apagado* pero no contenga el texto *DHCP*. Ordena por la propiedad `TimeGenerated` y muestra únicamente los 10 más recientes.
+### :keyboard: Reto 10 (Examen 23/24)
+Crea un directorio llamado `eventos`. Copia en el directorio los ficheros con extensión *evtx* del directorio `c:\windows\system32\winevent\logs` que tengan una fecha de modificación posterior al día 14 de febrero de 2024. Elimina del directorio `eventos` los ficheros con un tamaño superior a 1000000.
 
 # Referencias
 [Aprende con Alf](https://aprendeconalf.es/)
