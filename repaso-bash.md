@@ -64,8 +64,7 @@ Id. Tipo Fecha Importe Descripción
 - Si se elige la opción T se mostrará un listado con los 5 gastos de mayor importe, ordenados de mayor a menor importe. No deberán aparecer ingresos. Se mostrarán únicamente los campos fecha, importe y descripción.
 
 ### :keyboard: Reto 10 (Examen 23/24)
-En este ejercicio deberás crear un script que servirá para facilitar la visualización y creación de usuarios 
-locales del sistema.
+En este ejercicio deberás crear un script que servirá para facilitar la visualización y creación de usuarios locales del sistema.
 
 Consulta el fichero `/etc/passwd` que contiene información de los usuarios del sistema y responde:
 - ¿Cuál es el delimitador utilizado en el fichero? ______________
@@ -83,7 +82,7 @@ USO: userutils.sh
 - Si se lanza el script con la opción `-n` se solicitará al usuario un nombre de usuario por teclado. Después de comprobar que el nombre de usuario no ha quedado vacío, creará el usuario a través del comando `adduser`.
 - Si el script se lanza con otro parámetro distinto de los anteriores, el script mostrará un error explicativo y finalizará su ejecución.
 
-### :keyboard: Reto 10 (Examen 23/24)
+### :keyboard: Reto 11 (Examen 23/24)
 En este ejercicio vas a crear un script para implementar un pequeño configurador de equipos informáticos.  
 
 El script llevará por nombre `pcmaker.sh` y utilizará un fichero de datos llamado `pcmaker.dat`. En este fichero se almacenará el catálogo de componentes que el usuario puede utilizar en el configurador de equipos siguiendo este formato: 
