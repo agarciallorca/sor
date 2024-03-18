@@ -23,13 +23,12 @@ Si se ejecuta el script con la opción `-u`, debe mostrar por pantalla aquellos 
 
 Si se ejecuta el script con la opción `-g`, debe mostrar por pantalla aquellos grupos (del fichero `/etc/group`) que tengan un GID>=1000. Nota: el GID es el campo nº 3 del fichero.
 ### :keyboard: Reto 6
-Crea un script que pregunte unos datos al usuario: *nombre*, *apellidos*, *fecha de nacimiento* y *nombre de usuario*. El script generará un fichero que se llamará como el nombre del usuario y con extensión *.fic* con el siguiente formato:
+Crea un script que pregunte unos datos al usuario: *nombre*, *apellidos* y *fecha de nacimiento*. El script generará automáticamente un nombre de usuario formado por la primera letra del nombre y el primer apellido completo. A continuación se creará un fichero que se llamará como el nombre del usuario y con extensión *.fic* con el siguiente formato:
 ```
 Nombre:Apellido1:Apellido2:FechaNacimiento:Usuario
 ```
 Si el fichero ya existe se solicitará confirmación antes de sobreescribir su contenido. Si se contesta afirmativamente se sobreescribirá el fichero, en caso contrario se mostrará “Operación cancelada”.
-### :keyboard: Reto 7
-### :keyboard: Reto 8 (Examen 23/24)
+### :keyboard: Reto 7 (Examen 23/24)
 En este ejercicio debes crear un script llamado `utils.sh` que permitirá realizar dos operaciones: hacer un fichero de script básico y realizar la copia de los ficheros de script en un directorio de seguridad.
 - El script admitirá únicamente 1 o 2 parámetros, en caso contrario dará un error explicativo y finalizará la ejecución del script.
 - Si el script se lanza con el parámetro `-s` se exigirá que exista un segundo parámetro. Una vez realizada la comprobación, el script deberá crear un fichero con el nombre indicado en el segundo parámetro y con extensión *.sh*. Este fichero contendrá una primera línea con el texto `#!/bin/bash` y deberá tener permisos de ejecución para cualquier usuario.
@@ -43,7 +42,7 @@ ERROR: Se requiere un segundo parámetro.
 - Si el script se lanza con el parámetro `-b` se dará un aviso de la operación a realizar. Si el usuario responde de forma afirmativa (S o s), se deberá crear un directorio llamado `scripts` en caso de no existir. Una vez creado se copiarán todos los archivos con extensión *.sh* dentro del directorio `scripts`.
 - Si el script se lanza con cualquier otro parámetro distinto de los anteriores, se deberá dar un error explicativo y finalizar la ejecución.
 
-### :keyboard: Reto 9 (Examen 23/24)
+### :keyboard: Reto 8 (Examen 23/24)
 En este ejercicio debes crear un script llamado `gastos.sh` que permitirá llevar un control básico de gastos utilizando un fichero de datos llamado `gastos.db` que tendrá el siguiente formato delimitado por caracteres:
 ```
 num|tipo|fecha|importe|descripción
@@ -78,7 +77,7 @@ Id. Tipo Fecha Importe Descripción
 - Si se elige la opción S se realizará el cálculo del saldo en cuenta, teniendo en cuenta que hay líneas de dos tipos: ingresos y gastos.
 - Si se elige la opción T se mostrará un listado con los 5 gastos de mayor importe, ordenados de mayor a menor importe. No deberán aparecer ingresos. Se mostrarán únicamente los campos fecha, importe y descripción.
 
-### :keyboard: Reto 10 (Examen 23/24)
+### :keyboard: Reto 9 (Examen 23/24)
 En este ejercicio deberás crear un script que servirá para facilitar la visualización y creación de usuarios locales del sistema.
 
 - Crea un script llamado `userutils.sh`. Si el script se ejecuta sin parámetros de entrada o con el parámetro -h se mostrará una ayuda indicando las opciones disponibles del script:
@@ -93,7 +92,7 @@ USO: userutils.sh
 - Si se lanza el script con la opción `-n` se solicitará al usuario un nombre de usuario por teclado. Después de comprobar que el nombre de usuario no ha quedado vacío, creará el usuario a través del comando `adduser`.
 - Si el script se lanza con otro parámetro distinto de los anteriores, el script mostrará un error explicativo y finalizará su ejecución.
 
-### :keyboard: Reto 11 (Examen 23/24)
+### :keyboard: Reto 10 (Examen 23/24)
 En este ejercicio vas a crear un script para implementar un pequeño configurador de equipos informáticos.  
 
 El script llevará por nombre `pcmaker.sh` y utilizará un fichero de datos llamado `pcmaker.dat`. En este fichero se almacenará el catálogo de componentes que el usuario puede utilizar en el configurador de equipos siguiendo este formato: 
