@@ -1,4 +1,4 @@
-# Itinerario de entrenamiento de PowerShell
+# Plan de recuperación de PowerShell
 A continuación se muestra una serie de ejercicios para realizar en **PowerShell**.
 
 ## Scripts
