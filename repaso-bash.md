@@ -11,8 +11,23 @@ Haz un script que calcule la media aritmética de una serie de números.
 
 El programa admitirá un sólo parámetro desde la línea de comandos y éste determinará cuántos números pedirá el programa. Tras introducir todos los números, el programa calculará la media y la mostrará por pantalla.
 ### :keyboard: Reto 4
+Realiza un script que solicite una contraseña y la verifique con una almacenada previamente en el script (p.e. 1234).
+
+Si las contraseñas son iguales dará un mensaje "Verificación OK", en caso contrario dará un mensaje "Error de verificación" y la volverá a pedir hasta que coincida. El número máximo de intentos será 3 y el script debe mostrar el número de intentos disponibles en pantalla.
 ### :keyboard: Reto 5
+Haz un script que muestre los usuarios o grupos personalizados del sistema. 
+
+El script debe exigir un parámetro, que deberá ser `-g` o `-u`. Cualquier otro parámetro devolverá un error y no continuará la ejecución del script.
+
+Si se ejecuta el script con la opción `-u`, debe mostrar por pantalla aquellos usuarios (del fichero `/etc/passwd`) que tengan un UID>=1000. Nota: el UID es el campo nº 3 del fichero.
+
+Si se ejecuta el script con la opción `-g`, debe mostrar por pantalla aquellos grupos (del fichero `/etc/group`) que tengan un GID>=1000. Nota: el GID es el campo nº 3 del fichero.
 ### :keyboard: Reto 6
+Crea un script que pregunte unos datos al usuario: *nombre*, *apellidos*, *fecha de nacimiento* y *nombre de usuario*. El script generará un fichero que se llamará como el nombre del usuario y con extensión *.fic* con el siguiente formato:
+```
+Nombre:Apellido1:Apellido2:FechaNacimiento:Usuario
+```
+Si el fichero ya existe se solicitará confirmación antes de sobreescribir su contenido. Si se contesta afirmativamente se sobreescribirá el fichero, en caso contrario se mostrará “Operación cancelada”.
 ### :keyboard: Reto 7
 ### :keyboard: Reto 8 (Examen 23/24)
 En este ejercicio debes crear un script llamado `utils.sh` que permitirá realizar dos operaciones: hacer un fichero de script básico y realizar la copia de los ficheros de script en un directorio de seguridad.
@@ -65,10 +80,6 @@ Id. Tipo Fecha Importe Descripción
 
 ### :keyboard: Reto 10 (Examen 23/24)
 En este ejercicio deberás crear un script que servirá para facilitar la visualización y creación de usuarios locales del sistema.
-
-Consulta el fichero `/etc/passwd` que contiene información de los usuarios del sistema y responde:
-- ¿Cuál es el delimitador utilizado en el fichero? ______________
-- ¿Cuántos campos tiene el fichero? ___________
 
 - Crea un script llamado `userutils.sh`. Si el script se ejecuta sin parámetros de entrada o con el parámetro -h se mostrará una ayuda indicando las opciones disponibles del script:
 ```
