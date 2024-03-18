@@ -1,4 +1,4 @@
-# Itinerario de entrenamiento de Bash
+# Plan de recuperación de Shell Script
 A continuación se muestra una serie de ejercicios para realizar en **Bash**.
 
 ## Scripts
