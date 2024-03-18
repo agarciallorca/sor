@@ -2,6 +2,18 @@
 A continuación se muestra una serie de ejercicios para realizar en **Bash**.
 
 ## Scripts
+### :keyboard: Reto 1
+Haz un script que reciba dos números como parámetros y te diga cuál es el mayor de ellos. Debes comprobar que el número de parámetros introducidos sea 2, en caso contrario el script dará un error explicativo.
+### :keyboard: Reto 2
+Haz un script que pida al usuario una contraseña con confirmación. Si no coinciden las dos contraseñas introducidas debe dar un error y volver a solicitar las contraseñas.
+### :keyboard: Reto 3
+Haz un script que calcule la media aritmética de una serie de números. 
+
+El programa admitirá un sólo parámetro desde la línea de comandos y éste determinará cuántos números pedirá el programa. Tras introducir todos los números, el programa calculará la media y la mostrará por pantalla.
+### :keyboard: Reto 4
+### :keyboard: Reto 5
+### :keyboard: Reto 6
+### :keyboard: Reto 7
 ### :keyboard: Reto 8 (Examen 23/24)
 En este ejercicio debes crear un script llamado `utils.sh` que permitirá realizar dos operaciones: hacer un fichero de script básico y realizar la copia de los ficheros de script en un directorio de seguridad.
 - El script admitirá únicamente 1 o 2 parámetros, en caso contrario dará un error explicativo y finalizará la ejecución del script.
