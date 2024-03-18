@@ -2,6 +2,55 @@
 A continuación se muestra una serie de ejercicios para realizar en **Bash**.
 
 ## Scripts
+### :keyboard: Reto 8 (Examen 23/24)
+En este ejercicio debes crear un script llamado `utils.sh` que permitirá realizar dos operaciones: hacer un fichero de script básico y realizar la copia de los ficheros de script en un directorio de seguridad.
+- El script admitirá únicamente 1 o 2 parámetros, en caso contrario dará un error explicativo y finalizará la ejecución del script.
+- Si el script se lanza con el parámetro `-s` se exigirá que exista un segundo parámetro. Una vez realizada la comprobación, el script deberá crear un fichero con el nombre indicado en el segundo parámetro y con extensión *.sh*. Este fichero contendrá una primera línea con el texto `#!/bin/bash` y deberá tener permisos de ejecución para cualquier usuario.
+```
+./utils.sh -s
+ERROR: Se requiere un segundo parámetro.
+
+./utils.sh -s holamundo
+ÉXITO: Se ha creado el script holamundo.sh.
+```
+- Si el script se lanza con el parámetro `-b` se dará un aviso de la operación a realizar. Si el usuario responde de forma afirmativa (S o s), se deberá crear un directorio llamado `scripts` en caso de no existir. Una vez creado se copiarán todos los archivos con extensión *.sh* dentro del directorio `scripts`.
+- Si el script se lanza con cualquier otro parámetro distinto de los anteriores, se deberá dar un error explicativo y finalizar la ejecución.
+
+### :keyboard: Reto 9 (Examen 23/24)
+En este ejercicio debes crear un script llamado `gastos.sh` que permitirá llevar un control básico de gastos utilizando un fichero de datos llamado `gastos.db` que tendrá el siguiente formato delimitado por caracteres:
+```
+num|tipo|fecha|importe|descripción
+```
+- Si el fichero `gastos.db` no existe, dará un aviso por pantalla pero continuará la ejecución del script creando el fichero completamente vacío.
+- Se mostrará repetitivamente el siguiente menú mientras no se elija la opción de salir:
+```
+Control de gastos
+=================
+(N)uevo ingreso/gasto
+(L)ista de movimientos
+(S)aldo
+(T)op de gastos
+(X) Salir
+
+Opción:
+```
+- Si se elige la opción N se solicitarán al usuario los datos necesarios para introducir un nuevo gasto/ingreso en el fichero de datos:
+  - *id*: número identificador del movimiento
+  - *tipo*: ingreso o gasto
+  - *fecha*
+  - *importe*
+  - *descripción*
+  - Se debe conservar el formato del fichero indicado arriba, utilizando los delimitadores.
+
+- Haz el cambio necesario para que el script no solicite por teclado el *id*, sino que se genere automáticamente. El id generado será una unidad más que el mayor id existente en el fichero de datos.
+- Si se elige la opción L se mostrará el listado completo de datos del fichero sustituyendo el carácter delimitador por tabuladores. Antes del listado se mostrará el siguiente encabezado con las columnas separadas por tabuladores:
+```
+Id. Tipo Fecha Importe Descripción
+--- ---- ----- ------- -----------
+```
+- Si se elige la opción S se realizará el cálculo del saldo en cuenta, teniendo en cuenta que hay líneas de dos tipos: ingresos y gastos.
+- Si se elige la opción T se mostrará un listado con los 5 gastos de mayor importe, ordenados de mayor a menor importe. No deberán aparecer ingresos. Se mostrarán únicamente los campos fecha, importe y descripción.
+
 ### :keyboard: Reto 10 (Examen 23/24)
 En este ejercicio deberás crear un script que servirá para facilitar la visualización y creación de usuarios 
 locales del sistema.
