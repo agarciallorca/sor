@@ -14,7 +14,7 @@ Escribir un script que almacene la cadena de caracteres contraseña en una varia
 ### :keyboard: Reto 4
 Escribir un script que pregunte el nombre completo del usuario en la consola y después muestre por pantalla el nombre completo del usuario tres veces, una con todas las letras minúsculas, otra con todas las letras mayúsculas y otra solo con la primera letra del nombre y de los apellidos en mayúscula. El usuario puede introducir su nombre combinando mayúsculas y minúsculas como quiera.
 ### :keyboard: Reto 5
-Escribir un script que pregunte el nombre del usuario en la consola y después de que el usuario lo introduzca muestre por pantalla <NOMBRE> tiene <n> letras, donde <NOMBRE> es el nombre de usuario en mayúsculas y <n> es el número de letras que tienen el nombre.
+Escribir un script que pregunte el nombre del usuario en la consola y después de que el usuario lo introduzca muestre por pantalla `NOMBRE tiene n letras`, donde `NOMBRE` es el nombre de usuario en mayúsculas y `n` es el número de letras que tienen el nombre.
 ### :keyboard: Reto 6
 Escribir un script que pregunte el correo electrónico del usuario en la consola y muestre por pantalla otro correo electrónico con el mismo nombre (la parte delante de la arroba @) pero con dominio alu.edu.gva.es.
 ### :keyboard: Reto 7
