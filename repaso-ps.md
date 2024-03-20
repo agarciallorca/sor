@@ -74,11 +74,11 @@ Se quiere diseñar un script `inventario.ps1` para gestionar el inventario de la
 ```
 Inventario TIC
 ==============
-1.	Listar ubicaciones
-2.	Añadir ubicación
-3.	Eliminar ubicación
-4.	Modificar datos
-5.	Salir
+1. Listar ubicaciones
+2. Añadir ubicación
+3. Eliminar ubicación
+4. Modificar datos
+5. Salir
 
 Elija una opción:
 ```
