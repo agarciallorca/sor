@@ -127,16 +127,35 @@ Consigue estas alternativas:
 Obtén un listado de servicios que tengan configurado el arranque (`StartType`) como automático pero que estén en estado (`Status`) detenido. Muestra únicamente las propiedades `Name` y `DisplayName`.
 
 <details>
-  <summary>*Ver solución*</summary>
+  <summary>Ver solución</summary>
   Get-Service | Where-Object -Property StartType -EQ Automatic | Where-Object -Property Status -EQ Stopped | Select-Object -Property Name,DisplayName
 </details>
 
 ### :keyboard: Reto 8 (Examen 23/24)
 Ejecuta el comando necesario para obtener el tamaño ocupado por todos los ficheros del directorio `c:\users` (y sus subdirectorios).
+
+<details>
+  <summary>Ver solución</summary>
+  Get-ChildItem C:\Users -Recurse | Measure-Object -Property Length -Sum
+</details>
+
 ### :keyboard: Reto 9 (Examen 23/24)
 El comando `Get-EventLog -LogName System` muestra por pantalla los eventos ocurridos en el sistema. Obtén los eventos que contengan en su mensaje (propiedad `Message`) la palabra *apagado* pero no contenga el texto *DHCP*. Ordena por la propiedad `TimeGenerated` y muestra únicamente los 10 más recientes.
+
+<details>
+  <summary>Ver solución</summary>
+  Get-EventLog -LogName System | Where-Object -Property Message -Like "*apagado*" | Where-Object -Property Message -NotLike "*DHCP*" | Sort-Object -Property TimeGenerated -Descending | Select-Object -First 10
+</details>
+
 ### :keyboard: Reto 10 (Examen 23/24)
 Crea un directorio llamado `eventos`. Copia en el directorio los ficheros con extensión *evtx* del directorio `c:\windows\system32\winevent\logs` que tengan una fecha de modificación posterior al día 14 de febrero de 2024. Elimina del directorio `eventos` los ficheros con un tamaño superior a 1000000.
+
+<details>
+  <summary>Ver solución</summary>
+  New-Item -ItemType directory -Name eventos
+  Get-ChildItem C:\Windows\System32\winevt\Logs\*.evtx | Where-Object -Property LastWriteTime -GT "02/14/2024" | Copy-Item -Destination eventos
+  Get-ChildItem eventos | Where-Object -Property Length -GT 1000000 | Remove-Item
+</details>
 
 # Referencias
 [Aprende con Alf](https://aprendeconalf.es/)
