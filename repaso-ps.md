@@ -59,7 +59,7 @@ A8-1;ABCD-1234-EFGH-5678
 A8-2;WXYZ-5678-IJKL-9012
 A8-3;QWERT-0987-ASDF-6543
 ...
-> [Ver solución]()
+> [Ver solución](licencias.ps1)
 ```
 ### :keyboard: Reto 13 (Examen 23/24)
 Se quiere diseñar un script `inventario.ps1` para gestionar el inventario de las aulas de informática del instituto. Para ello se utilizará un diccionario llamado `$inventario` que almacenará como clave el nombre de la ubicación y un array de tres valores asociados a la clave: *nº de equipos*, *tipo* y *características*.
