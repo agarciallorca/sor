@@ -107,6 +107,7 @@ Tipo (Sobremesa):
 Características (Intel Core i3 9th Gen):
 OK! Ubicación actualizada
 ```
+> [Ver solución](inventario.ps1)
 ## Comandos
 ### :keyboard: Reto 1
 Obtén un listado de procesos que están en ejecución en el sistema.
