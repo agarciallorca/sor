@@ -134,3 +134,12 @@ Crea un directorio llamado `eventos`. Copia en el directorio los ficheros con ex
 
 # Referencias
 [Aprende con Alf](https://aprendeconalf.es/)
+<details>
+  <summary>Click to expand!</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
