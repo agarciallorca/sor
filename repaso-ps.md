@@ -125,6 +125,7 @@ Consigue estas alternativas:
 - Que el listado de procesos obtenido se almacene en un fichero llamado `procesosgrandes.txt`.
 ### :keyboard: Reto 7 (Examen 23/24)
 Obtén un listado de servicios que tengan configurado el arranque (`StartType`) como automático pero que estén en estado (`Status`) detenido. Muestra únicamente las propiedades `Name` y `DisplayName`.
+
 <details>
   <summary>*Ver solución*</summary>
   Get-Service | Where-Object -Property StartType -EQ Automatic | Where-Object -Property Status -EQ Stopped | Select-Object -Property Name,DisplayName
