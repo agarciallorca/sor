@@ -152,8 +152,8 @@ Crea un directorio llamado `eventos`. Copia en el directorio los ficheros con ex
 
 <details>
   <summary>Ver solución</summary>
-  New-Item -ItemType directory -Name eventos
-  Get-ChildItem C:\Windows\System32\winevt\Logs\*.evtx | Where-Object -Property LastWriteTime -GT "02/14/2024" | Copy-Item -Destination eventos
+  New-Item -ItemType directory -Name eventos<br>
+  Get-ChildItem C:\Windows\System32\winevt\Logs\*.evtx | Where-Object -Property LastWriteTime -GT "02/14/2024" | Copy-Item -Destination eventos<br>
   Get-ChildItem eventos | Where-Object -Property Length -GT 1000000 | Remove-Item
 </details>
 
