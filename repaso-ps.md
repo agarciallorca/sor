@@ -126,9 +126,10 @@ Consigue estas alternativas:
 ### :keyboard: Reto 7 (Examen 23/24)
 Obtén un listado de servicios que tengan configurado el arranque (`StartType`) como automático pero que estén en estado (`Status`) detenido. Muestra únicamente las propiedades `Name` y `DisplayName`.
 <details>
-  <summary>Ver solución</summary>
+  <summary>*Ver solución*</summary>
   Get-Service | Where-Object -Property StartType -EQ Automatic | Where-Object -Property Status -EQ Stopped | Select-Object -Property Name,DisplayName
 </details>
+
 ### :keyboard: Reto 8 (Examen 23/24)
 Ejecuta el comando necesario para obtener el tamaño ocupado por todos los ficheros del directorio `c:\users` (y sus subdirectorios).
 ### :keyboard: Reto 9 (Examen 23/24)
