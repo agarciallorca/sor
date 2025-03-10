@@ -166,4 +166,25 @@ Configuración almacenada en el fichero gaming.pc
   - Al acabar añadirá al final del fichero de configuración una línea con la fecha de la valoración (fecha actual en formato dd/mm/aa) y el importe total.
   - Por último, mostrará por pantalla el fichero de configuración. 
 
+### :keyboard: Reto 11 (Examen 24/25)
+Una dirección IPv4 válida está compuesta por cuatro octetos separados por “.”. Por ejemplo: 
+```
+172.30.199.200 
+```
+Se pide desarrollar un script llamado `valida_ip.sh` que permita validar una dirección IP que el usuario introduzca por teclado. El script analizará si la dirección IP es o no válida e indicará de qué clase es. 
+- En primer lugar, se pedirá por teclado al usuario una dirección IP completa. 
+- A continuación, el script deberá extraer los octetos de la IP y comprobar: 
+  - Que ninguno de los 4 octetos de la dirección IP es mayor que 255. En caso contrario dará un mensaje explicativo y finalizará la ejecución con un código de error. 
+  - Si la dirección IP tiene 4 octetos. En caso contrario dará un error explicativo y finalizará la ejecución con un código de error. 
+Por último, el script deberá mostrar por pantalla de qué clase es la dirección IP que ha introducido el usuario teniendo en cuenta la siguiente tabla: 
+```
+| Clase | IP inicial      | IP final        |
+|-------|-----------------|-----------------|
+|   A   | 0.0.0.0         | 127.255.255.255 |
+|   B   | 128.0.0.0       | 191.255.255.255 |
+|   C   | 192.0.0.0       | 223.255.255.255 |
+|   D   | 224.0.0.0       | 239.255.255.255 |
+|   E   | 240.0.0.0       | 255.255.255.254 |
+```
+
 # Referencias
