@@ -119,10 +119,10 @@ Ordena el listado anterior por la propiedad Id de forma ascendente.
 Filtra los resultados del listado anterior para que sólo aparezcan aquellos procesos cuya propiedad `SessionId` sea distinta de 0.
 ### :keyboard: Reto 5
 Haz ahora que además sólo aparezcan aquellos procesos que tengan un uso de memoria (`PagedMemorySize`) mayor que 10MB.
-### :keyboard: Reto 6
-Consigue estas alternativas:
-- Que se muestren por pantalla cuántos procesos cumplen los criterios anteriores y su uso de memoria promedio (`Average`).
-- Que el listado de procesos obtenido se almacene en un fichero llamado `procesosgrandes.txt`.
+### :keyboard: Reto 6a
+Consigue que se muestren por pantalla cuántos procesos cumplen los criterios anteriores y su uso de memoria promedio (`Average`).
+### :keyboard: Reto 6b
+Consigue que el listado de procesos obtenido se almacene en un fichero llamado `procesosgrandes.txt`.
 ### :keyboard: Reto 7 (Examen 23/24)
 Obtén un listado de servicios que tengan configurado el arranque (`StartType`) como automático pero que estén en estado (`Status`) detenido. Muestra únicamente las propiedades `Name` y `DisplayName`.
 
